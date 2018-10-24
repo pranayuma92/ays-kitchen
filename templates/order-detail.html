@@ -1,0 +1,57 @@
+<ion-view>
+  <ion-content>
+    <ion-list ng-repeat="user in userOrder">
+		<!--<div class="profile-section">
+			<div class="wrapper">
+				<div class="profile-avatar" style="background-image:url('img/default_dp.png')"></div>
+				<h4 style="text-transform:uppercase;color:#000">{{user.nama}}</h4>
+			</div>
+		</div>-->
+	  <div align="center">
+	  	<h4 style="font-weight: bold;margin-top: 20px">{{user.nama}}</h4>
+	  </div>
+	  <ion-item class="item item-icon-left order-detail item-text-wrap">
+		  <i class="icon ion-android-home"></i>
+		  Alamat<br>
+		  <h2><b>{{user.alamat}}</b></h2>
+	  </ion-item>
+	  <ion-item class="item item-icon-left order-detail">
+		  <i class="icon ion-android-call"></i>
+		  Telp<br>
+		  <h2><b>{{user.telp}}</b></h2>
+	  </ion-item>
+	  <ion-item class="item item-icon-left order-detail">
+		  <i class="icon ion-android-map"></i>
+		  Kota<br>
+		  <h2><b>{{user.kota}}</b></h2>
+	  </ion-item>
+	  <ion-item class="item item-icon-left order-detail">
+		  <i class="icon ion-paper-airplane"></i>
+		  Kode Pos<br>
+		  <h2><b>{{user.pos}}</b></h2>
+	  </ion-item>
+	  <ion-item class="item item-icon-left order-detail">
+		  <i class="icon ion-card"></i>
+		  Pembayaran<br>
+		  <h2><b>{{user.pembayaran}}</b></h2>
+	  </ion-item>
+    </ion-list>
+	  <div class="padding" style="padding-top:30%">
+	      <div ng-show="userOrder.length == 0" align="center">
+			  <i style="font-size:100px;color:#bdbdbd" class="icon ion-android-person"></i>
+			  <h4>Order detail kosong</h4>
+		  </div>
+	  </div>
+  </ion-content>
+	<ion-footer-bar class="bar-assertive bar-assertive-a" style="border:none;" align-title="center">
+
+		<h1 class="title total" ng-if="userOrder.length == 0">
+			<button class="button button-clear button-full" ng-click="modal.show()"><b>Tambah</b></button>
+		</h1>
+
+		<h1 class="title total" ng-if="userOrder.length != 0">
+			<button class="button button-clear button-full" ng-click="removeUser(user)"><b>Hapus</b></button>
+		</h1>
+
+	</ion-footer-bar>
+</ion-view>

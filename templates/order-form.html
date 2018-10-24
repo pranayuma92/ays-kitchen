@@ -1,0 +1,50 @@
+<ion-modal-view>
+ <ion-header-bar align-title="center" class="bar-stable">
+	 <div class="buttons">
+		 <button class="button button-clear button-icon button-assertive ion-android-close" ng-click="modal.hide()"></button>
+	 </div>
+	<h1 class="title">
+		<img src="img/logo.png" width="initial" height="40"/>
+	</h1>
+  </ion-header-bar>
+  <ion-content>
+	  <div class="list">
+		  <div class="item item-divider" align="center">
+			  <b>Isi Identitas Anda</b>
+		  </div>
+		  <label class="item item-input item-floating-label">
+			<span class="input-label">Nama Lengkap</span>
+			<input ng-model="user.nama" type="text" placeholder="Nama Lengkap">
+		  </label>
+		  <label class="item item-input item-floating-label">
+			<span class="input-label">Nomor Telp</span>
+			<input ng-model="user.telp" type="text" placeholder="Nomor Telp">
+		  </label>
+		  <label class="item item-input item-floating-label">
+			<span class="input-label">Alamat</span>
+			<input ng-model="user.alamat" type="text" placeholder="Alamat">
+		  </label>
+		  <label class="item item-input item-floating-label">
+			<span class="input-label">Kota</span>
+			<input ng-model="user.kota" type="text" placeholder="Kota">
+		  </label>
+		  <label class="item item-input item-floating-label">
+			<span class="input-label">Kode Pos</span>
+			<input ng-model="user.pos" type="text" placeholder="Kode Pos">
+		  </label>
+		  <br>
+		  <div class="item item-divider" align="center">
+			  <b>Pilih metode pembayaran</b>
+		  </div>
+		  <ion-radio ng-model="user.pembayaran" value="banking">Banking</ion-radio>
+		  <ion-radio ng-model="user.pembayaran" value="cod">COD / Bayar ditempat</ion-radio>
+	  </div>
+  </ion-content>
+	<ion-footer-bar class="bar-assertive bar-assertive-a" style="border:none;" align-title="center">
+
+		<h1 class="title total">
+			<button ng-disabled="userOrder.length != 0" class="button button-clear button-full" ng-click="save(user)"><b>Simpan</b></button>
+		</h1>
+
+	</ion-footer-bar>
+</ion-modal-view>

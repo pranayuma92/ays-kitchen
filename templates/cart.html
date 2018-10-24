@@ -1,0 +1,57 @@
+<ion-view title="Keranjang">
+  <ion-content>
+      <ion-list ng-show="cart.length != 0" ng-repeat="user in userOrder">
+		  <ion-item class="item order-detail">
+			  <p>Dikirim Kepada :</p>
+			  <h2><b>{{user.nama}}</b></h2>
+			  <p>{{user.alamat}}, {{user.kota}}</p>
+		  </ion-item>
+		  <ion-item class="item item-divider"></ion-item>
+	  </ion-list>
+	  
+      <div ng-show="cart.length != 0">
+	  <ion-list ng-if="userOrder.length == 0">
+		  <ion-item class="item item-text-wrap" ui-sref="app.orderdetail">
+			  <h2><b>Order detail kosong</b></h2>
+			  <p>Silahkan isi terlebih dahulu</p>
+		  </ion-item>
+		  <ion-item class="item item-divider"></ion-item>
+	  </ion-list>
+	  </div>
+
+	  <ion-list ng-repeat="item in cart | orderBy: reverse:true" >
+		  <ion-item class="item-thumbnail-left" >
+			  <img  ng-src="{{item.item_image}}" >
+			  <h2><b>{{item.item_name}}</b></h2>
+			  <p style="color: #089647"><b>{{item.item_price| currency : "IDR ": 0}}</b></p>
+			  <p style="position:absolute;right:20px;color:#9E9E9E; top:30px"><b> {{item.item_qty}}</b></p>
+			  <ion-option-button class="button button-assertive-a" ng-click="removeFromCart(item.$id)">
+				  <i class ="icon ion-android-delete" ></i>
+			  </ion-option-button>
+			  <button style="position:absolute;right:10px;color:#9E9E9E; top:0" class="button button-small button-stable button-clear icon ion-minus" ng-click="decItem(item.$id)"></button>
+			   <button style="position:absolute;right:10px;color:#9E9E9E" class="button button-small button-stable button-clear icon ion-plus" ng-click="incItem(item.$id)"></button>
+   		  </ion-item>
+	  </ion-list>
+	  
+	  <div class="padding" style="padding-top:30%">
+	      <div ng-show="cart.length == 0" align="center">
+			  <i style="font-size:100px;color:#bdbdbd" class="icon ion-bag"></i>
+			  <h4>Keranjang anda kosong</h4>
+		  </div>
+	  </div>
+
+	  <div class="padding cta">
+   		<button ng-disabled="cart.length == 0" class="button button-positive button-full" ng-click="add(product,valueQty); resetQty()" ui-sref="app.checkout">
+		 	{{get_total() | currency : "IDR ": 0}} | ORDER
+		</button>
+	</div>
+	  
+  </ion-content>
+	<!-- <ion-footer-bar class="bar-assertive bar-assertive-a" style="border:none;" align-title="center">
+		
+		<h1 class="title total">
+			<button ng-disabled="cart.length == 0" class="button button-clear button-full" ng-click="confirm()"><b>{{total | currency: "IDR " : 0}} | ORDER</b></button>
+		</h1>
+		
+	</ion-footer-bar> -->
+</ion-view>

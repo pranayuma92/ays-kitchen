@@ -1,0 +1,58 @@
+<ion-modal-view>
+ <ion-header-bar align-title="center" class="bar-stable">
+	 <div class="buttons">
+		 <button class="button button-clear button-icon button-assertive ion-android-close" ng-click="modal.hide();resetQty()"></button>
+	 </div>
+	<h1 class="title">
+		<b>Profil</b>
+	</h1>
+  </ion-header-bar>
+  <ion-content class="has-header">
+	  <div class="list" align="center">
+		<div class="padding">
+		  <i style="font-size:200px;color:#089647" class="icon ion-ios-contact-outline"></i>
+		  <div class="item price" align="center">
+			  	<h2><b>{{user_info.displayName}}</b></h2>
+		  </div>
+		</div>   
+	  </div>
+	  <div class="padding">
+	    <ion-list>
+		  	<ion-item class="item item-icon-left">
+		  		<i class="icon ion-ios-email-outline"></i>
+    			{{user_info.email}}
+		  	</ion-item>
+		  	<ion-item class="item item-icon-left">
+		  		<i class="icon ion-ios-telephone-outline"></i>
+    			{{user_extras.telephone}}
+		  	</ion-item>
+		</ion-list>
+		<label ng-click="addAddress()" class="item item-input  item ic-selected" >
+            <i class="icon icon-right ion-ios-location" style="margin-right: 10px;" ></i>
+            Alamat
+            <i  class="icon icon-right ion-android-add-circle" style="font-size: larger ;margin-left: 10px;"></i>
+          </label>
+	 </div>
+		<div class="padding" ng-repeat="item in addresses">
+			<ion-item>
+          <div class="list" >
+            <div style="min-height: 30px;" class="item item-divider">
+                <a class="icon icon-right ion-ios-location"></a>
+                {{item.address}}, Pin: {{item.pin}}
+                <div style="position: absolute;top: 8px;right: 11px;">
+                  <a ng-click="addAddress(item)" class="icon icon-right ion-edit" style="font-size: 20px;"></a>
+                  <a ng-click="deleteAddress(item.$id)" class="icon icon-right ion-android-delete" style="font-size: 20px;"></a>
+                </div>
+            </div>
+            <!-- <div class="item item-body" >
+
+              <p> {{item.address}} </p>
+              <p>Pin: {{item.pin}}</p>
+              <p>Tel: {{item.phone}}</p>
+
+            </div> -->
+          </div>
+      </ion-item>
+        </div>
+  </ion-content>
+</ion-modal-view>

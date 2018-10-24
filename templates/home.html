@@ -1,0 +1,86 @@
+<ion-view title="Beranda">
+  <ion-nav-buttons side="secondary">
+      <button ui-sref="app.cart" class="button button-icon button-clear ion-bag button-assertive"><span ng-show="cart.length != 0">{{get_total()}}</span>
+      </button>
+  </ion-nav-buttons>
+  <ion-content class="has-header">
+	  
+	  <ion-slide-box auto-play ="true" does-continue="true" show-pager="true"  >
+		  <ion-slide class="swiper-slide swiper-slide-active" style="width:100%; height: initial; padding:0px; margin:0px"  ng-repeat="slide in slider" >
+			  <div align="center">
+				  <img  ng-src="{{'img/'+ slide.pic}}">
+			  </div>
+		  </ion-slide >
+	  </ion-slide-box>
+	  
+	  <!-- <div class="button-bar">
+		  <div ng-click="grid()" class="button button-dark button-clear button-block flat"><i class="icon ion-grid"></i></div>
+		  <div ng-click="list()" class="button button-dark button-clear button-block flat"><i class="icon ion-navicon"></i></div>
+		  <div ng-click="search()" class="button button-dark button-clear button-block flat"><i class="icon ion-android-search"></i></div>
+	  </div> -->
+	  <div class="list">
+		  <div class="item item-input-inset">
+			  <label class="item item-input-wrapper">
+				  <i class="icon ion-android-search placeholder-icon" ng-click="closeSearch()"></i>
+				  <input ng-model="searchItem.item.name" type="text"placeholder="Cari menu">
+			  </label>
+		  </div>
+	  </div>
+
+	  <div ng-show="menu.length == 0">
+    		<ion-list>
+	    		<ion-item href="#" class="item-thumbnail-left">
+				  <img class="img-placeholder">
+				  <h2 class="title-placeholder"><b>tes</b></h2>
+				  <p class="desc-placeholder">desc</p>
+				  <p class="price-placeholder">desc</p>
+	    		</ion-item>
+	    		<ion-item href="#" class="item-thumbnail-left">
+				  <img class="img-placeholder">
+				  <h2 class="title-placeholder"><b>tes</b></h2>
+				  <p class="desc-placeholder">desc</p>
+				  <p class="price-placeholder">desc</p>
+	    		</ion-item>
+	    		<ion-item href="#" class="item-thumbnail-left">
+				  <img class="img-placeholder">
+				  <h2 class="title-placeholder"><b>tes</b></h2>
+				  <p class="desc-placeholder">desc</p>
+				  <p class="price-placeholder">desc</p>
+	    		</ion-item>
+	    		<ion-item href="#" class="item-thumbnail-left">
+				  <img class="img-placeholder">
+				  <h2 class="title-placeholder"><b>tes</b></h2>
+				  <p class="desc-placeholder">desc</p>
+				  <p class="price-placeholder">desc</p>
+	    		</ion-item>
+	    		<ion-item href="#" class="item-thumbnail-left">
+				  <img class="img-placeholder">
+				  <h2 class="title-placeholder"><b>tes</b></h2>
+				  <p class="desc-placeholder">desc</p>
+				  <p class="price-placeholder">desc</p>
+	    		</ion-item>
+	    		<ion-item href="#" class="item-thumbnail-left">
+				  <img class="img-placeholder">
+				  <h2 class="title-placeholder"><b>tes</b></h2>
+				  <p class="desc-placeholder">desc</p>
+				  <p class="price-placeholder">desc</p>
+	    		</ion-item>
+	    	</ion-list>
+    	</div>
+	  
+	  <ion-list ng-show="listView" ng-repeat="item in menu | filter:searchItem.item | orderBy: reverse:true" >
+		  <ion-item href="#" class="item-thumbnail-left" ng-click="productDetail(item.$id);detailTab()">
+			  <img ng-src="{{item.image}}">
+			  <h2><b>{{item.name}}</b></h2>
+			  <p>{{item.description}}</p>
+			 <p style="color:#089647;">
+				  <b>{{item.price | currency: "IDR " : 0}} / {{item.pcs}}</b>
+			  </p>
+		  </ion-item>	  
+	  </ion-list>
+	  
+	 <!--  <pre>
+	  	{{menu | json}}
+	  </pre> -->
+  </ion-content>
+</ion-view>

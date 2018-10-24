@@ -1,0 +1,56 @@
+<ion-view>
+  <ion-content>
+    <div class="padding login-form" ng-show="loginView">
+     <div align="center" style="padding-top:10px;">
+         <img src="img/logo.png" height="100" width="initial" />
+    </div>
+  	<form name="loginForm" class="list " id="login-form1">
+	  <div class="list">
+  <label class="item item-input">
+    <input type="email" ng-model="user.email" placeholder="Email">
+  </label>
+  <label class="item item-input">
+    <input type="password" ng-model="user.password" placeholder="Password">
+  </label>
+</div>
+<div class="padding">
+		  <button ng-click="loginEmail(loginForm,user)" class="button button-full button-positive">Login</button>
+	  </div>
+</form>
+<div align="center">
+  <p ng-click="changeViewSignUp()">Belum punya akun? Daftar sekarang</p>
+ </div>
+</div>
+
+<div class="padding login-form" ng-show="signupView">
+     <div align="center" style="padding-top:10px;">
+         <img src="img/logo.png" height="100" width="initial" />
+    </div>
+    <form name="signupForm" class="list " id="signup-form1">
+    <div class="list">
+  <label class="item item-input">
+    <input type="text" ng-model="user.name" placeholder="Nama">
+  </label>
+   <label class="item item-input">
+    <input type="text" ng-model="user.phone" placeholder="Telepon">
+  </label>
+  <label class="item item-input">
+    <input type="email" ng-model="user.email" placeholder="Email">
+  </label>
+  <label class="item item-input">
+    <input type="password" ng-model="user.password" placeholder="Password">
+  </label>
+</div>
+<div class="padding">
+      <button ng-click="signupEmail(signupForm,user)" class="button button-full button-positive">Daftar</button>
+    </div>
+</form>
+<div align="center">
+  <p ng-click="changeViewLogin()">Sudah punya akun? <span>Login sekarang</span></p>
+ </div>
+</div>
+ 
+
+	  
+  </ion-content>
+</ion-view>

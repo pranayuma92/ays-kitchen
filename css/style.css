@@ -1,0 +1,497 @@
+/* Empty. Add your own CSS if you like */
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:300');
+
+* {
+  font-family: 'Roboto', sans-serif !important;
+  
+}
+
+.button-small {
+   border-radius: 3px;
+   font-size: 14px !important;
+}
+
+.pay {
+   font-size: 14px !important;
+}
+
+.jum {
+   background-color: #a9a9a9; /*#e42112;*/
+   border-radius: 4px;
+   padding: 5px;
+   color: #fff !important;
+}
+
+.total {
+  font-weight: bold;
+  font-size: 16px !important;
+  padding: 0;
+}
+
+.item-thumbnail-left img{
+  border-radius: 50%;
+}
+
+/* Button props */
+.button-balanced {
+  background-color:#43A047 !important;
+}
+
+.button-assertive-a {
+  background-color:#D50000 !important;
+  color:#fff !important;
+}
+
+.button-positive {
+  background-color:#0091EA !important;
+}
+
+.button-calm {
+  background-color:#00BCD4 !important;
+}
+
+.flat {
+  box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+}
+
+
+.header-badge {
+top : -7px !important ;
+//left : -20px !important ;
+right:-3px !important;
+positin:relative !important;
+padding:10px !important;
+border:50% !important;
+}
+
+.list .item,
+.item {
+  border: none;
+}
+
+.button {
+  /*box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  display: inline-block;
+  height: 36px;
+  padding: 0 2rem;
+  border-radius: 2px;
+  background-clip: padding-box;
+  text-transform: uppercase;*/
+  border: none;
+  outline: 0;
+  /*-webkit-tap-highlight-color: transparent; */
+}
+
+.bar {
+  border-bottom: none;
+  z-index: 2;
+  font-size: 1.3em;
+  width: 100%;
+  /*box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.26);*/ }
+
+  .bar-stable {
+    color :salmon !important;
+  }
+
+.bar .button {
+  min-width: 38px;
+  z-index: 3; }
+
+.bar .no-text span.back-text {
+  display: none; }
+
+.bar .title sup {
+  opacity: 0.7; }
+
+.bar.bar-header .button + .title {
+  text-align: left;
+  left: 35px;
+  line-height: 46px; }
+  
+.bar-assertive-a {
+  background-color:#D50000 !important;
+  color:#fff !important;
+}
+
+.ion-android-search,
+.ion-grid,
+.ion-navicon {
+  font-size:25px;
+}
+
+.item-input-wrapper {
+  -webkit-border-radius: 40px;
+  -moz-border-radius: 40px;
+  border-radius: 40px ;
+}
+
+.item-input-wrapper {
+  padding:3px 5px 3px 20px;
+}
+
+.order {
+  margin-top:25px;
+  margin-bottom:25px;
+}
+
+.button-block,
+.button-full {
+  border-radius: 0px !important;
+}
+
+.order-detail h2,
+.order-detail p{
+  text-transform: uppercase;
+}
+
+.total .button {
+  top:-5px;
+}
+
+/*side menu*/
+.menu-open .menu-content .pane, 
+.menu-open .menu-content .scroll-content,
+.menu-open .menu-content .scroll-content .scroll{
+pointer-events: auto !important;
+}
+
+.custom{
+  background-color:#FFFFFF!important;
+}
+
+.custom .item{
+  background-color:transparent;border:none;  /*Removes all borders*/
+  border-top:1pxsolid;  /*Top Border for each menu item*/
+  border-bottom:2pxsolid;  /*Bottom border for each menu item*/
+  border-color:#666;   /*Sets colors for top and bottom border*/
+   text-transform: none;
+  }/*Changes the border for the last item*/
+  
+.custom .item:last-child{
+  border-bottom:1pxsolid#666;
+}
+
+.custom .item-complex .item-content,
+.dark .item-radio .item-content{
+  background-color:transparent;
+}/*Just makes the type white*/
+
+.custom h2,
+.custom h3,
+.custom p,
+.custom a{
+  color:#089647;  /*Text color for each item, overrides the color property above*/
+}
+
+.custom .list .item:active{
+  background:rgba(0,0,0,0.1);
+}
+
+/** PROFILE SECTION **/
+.profile-section {
+background-size: cover;
+box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.26);
+color: #fff;
+min-height: 170px;
+position: relative;
+text-align: center;
+width: 100%;
+}
+
+.profile-section .profile-avatar {
+border-radius:50%;
+width:88px;
+height:88px;
+margin:0px;
+padding:0px;
+background-position:center;
+background-size:cover;
+display:inline-block;
+position:relative;
+border: solid 1px rgba(255, 255, 255, 0.8);
+}
+
+.profile-section > .wrapper {
+bottom: 30px;
+position: absolute;
+text-align: center;
+width: 100%;
+z-index: 1; 
+}
+
+.profile-section h1, 
+.profile-section h2, 
+.profile-section h3, 
+.profile-section h4, 
+.profile-section h5, 
+.profile-section h6 {
+color: #fff;
+margin: 0;
+}
+
+ /* Mask
+==================================*/
+.profile-section.mask:after{
+content: '';
+background: -webkit-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.6) 100%);
+height: 100%;
+left: 0;
+position: absolute;
+top: 0;
+z-index: 0;
+width: 100%;
+}
+
+.profile-section.mask-reverse:after {
+content: '';
+background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.6) 0%, transparent 100%);
+height: 100%;
+left: 0;
+position: absolute;
+top: 0;
+z-index: 0;
+width: 100%; 
+}
+
+.item-input.item-floating-label input {
+  background-color:#eeeeee;
+  border-radius:5px;
+  width:95%;
+  padding:10px;
+}
+
+.button-calm {
+  background: #fff !important;
+  color: #D50000 !important;
+  border-radius:5px;
+  box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+}
+
+.button-calm:active {
+  background: #D50000 !important;
+  color: #fff !important;
+  box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+}
+
+/* POPUP */
+.popup-buttons .button {
+    width: 30px;
+    border-radius: 30px !important;
+    height: 40px;
+    padding: 0;
+    min-height: 10px;
+}
+
+.popup {
+  text-align: center;
+  background-color: #fff !important;
+}
+
+.popup .popup-head{
+  background:#089647;
+}
+
+.popup .popup-title{
+  color:#fff;
+}
+
+.item-image {
+  position:relative;
+}
+
+.item-image i {
+  display:block;            
+  position:absolute;            
+  bottom:0;            
+  left:0;            
+  right:0;            
+  background:#222222;            
+  background:rgba(213,0,0, 0.7);          
+  color:#FFF !important;
+  padding:10px 5px;
+}
+
+.item-image p {
+  color:#FFF;
+}
+
+.item-image i:active {
+  background: #D50000;
+}
+
+.box{
+  height: 100%;
+}
+ion-slides{
+  height: 100% !important;
+}
+
+img.img-placeholder {
+    background: #d4d4d4;
+}
+
+h2.title-placeholder {
+    background: #d4d4d4;
+    color: #d4d4d4;
+    border-radius: 3px;
+}
+
+p.desc-placeholder {
+  background: #d4d4d4;
+    color: #d4d4d4;
+    border-radius: 3px;
+    margin: 5px 0;
+    border-radius: 3px;
+}
+
+p.price-placeholder {
+    background: #d4d4d4;
+    color: #d4d4d4;
+    width: 50%;
+    border-radius: 3px;
+}
+
+.button.button-assertive.button-clear {
+    border-color: transparent;
+    background: none;
+    box-shadow: none;
+    color: #089647;
+}
+
+.bar.bar-stable .title {
+    color: #089647;
+}
+
+.item.price h2 {
+    color: #089647;
+}
+
+.button.button-positive {
+    border-color: transparent;
+    background-color: #089647 !important;
+    color: #fff;
+    border-radius: 30px !important;
+    font-weight: 700;
+}
+
+.list.padding {
+    padding: 10px 50px;
+}
+
+.padding.cta {
+    padding: 10px 50px;
+    /*position: absolute;
+    width: 100%;
+    bottom: 40px;*/
+}
+
+div.item.item-input {
+    padding: 0;
+}
+
+i.icon.assertive.ion-android-arrow-back {
+    color: #089647;
+}
+
+.title.title-center.header-item {
+    font-weight: 900;
+}
+
+.secondary-buttons span {
+    position: absolute;
+    top: 0px;
+    color: #fff;
+    left: 10px;
+    padding: 0px 7px;
+    background: #d50000;
+    margin: 0;
+    height: auto;
+    width: auto;
+    line-height: 1.5em;
+    border-radius: 50%;
+    font-size: 15px;
+    font-weight: 800;
+}
+
+label.item.item-input.padding.cta textarea {
+    border: 1px solid #dedede;
+    padding: 10px;
+    background-color: #fbfbfb;
+    border-radius: 5px;
+}
+label.item.item-input.padding.cta {
+    margin-top: 30px;
+}
+
+span.date-review {
+    font-size: 12px;
+}
+
+.review-avatar i {
+    position: absolute;
+    font-size: 36px;
+}
+
+.review-avatar h3,
+.review-avatar span {
+    margin-left: 35px;
+}
+
+ion-item.hero-bg.item {
+    background: #089647;
+}
+
+label.item.item-input input {
+    background: #eee;
+    border-radius: 30px;
+    padding: 10px;
+    height: 35px;
+}
+
+label.item.item-input {
+    padding: 5px 15px;
+}
+
+.login-form {
+    width: 25em;
+    height: 35em;
+    /* background-color: blue; */
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    max-width: 100%;
+    max-height: 100%;
+    overflow: auto;
+    border-radius: 10px;
+}
+
+p.review-content {
+    text-overflow: inherit;
+    white-space: normal;
+}
+
+.detail-order,
+.order-name,
+.order-address {
+    margin-bottom: 30px;
+}
+
+.detail-order p,
+.order-name p,
+.order-address p {
+    font-size: 16px;
+}
+
+hr { background-color: #eaeaea; height: 1px; border: 0; }
+
+.padding.checkout {
+    padding: 20px 25px;
+}
+

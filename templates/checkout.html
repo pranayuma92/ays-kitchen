@@ -1,0 +1,52 @@
+<ion-view title="Pembayaran">
+  <ion-content>
+	  
+	<div class="padding checkout">
+		<div class="detail-order">
+			<h5><b>Detail Pesanan</b></h5>
+			<hr>
+			<div>
+				<p ng-repeat="item in cart | orderBy: reverse:true">{{item.item_name}}
+					 <span class="item-note">
+			      {{item.item_price| currency : "IDR ": 0}} x {{item.item_qty}}
+			    </span>
+				</p>
+			</div>	
+		</div>
+
+		<div class="order-name">
+			<h5><b>Pemesan</b></h5>
+			<hr>
+			<p>{{user_info.displayName}}</p>
+		</div>
+
+		<div class="order-address">
+			<h5><b>Alamat</b></h5>
+			<hr>
+			<p ng-repeat="item in addresses">{{item.address}}</p>
+			<p>{{user_extras.telephone}}</p>
+		</div>
+
+		<div class="order-total">
+			<hr>
+			<span><b>Total</b></span>
+			<span class="item-note"><b> {{get_total() | currency : "IDR ": 0}}</b></span>
+		</div>
+
+	</div>
+
+	  <div class="padding cta">
+   		<button ng-disabled="cart.length == 0" class="button button-positive button-full" ng-click="pay()">
+		 	SUBMIT ORDER
+		</button>
+	</div>
+	  
+  </ion-content>
+	<!-- <ion-footer-bar class="bar-assertive bar-assertive-a" style="border:none;" align-title="center">
+		
+		<h1 class="title total">
+			<button ng-disabled="cart.length == 0" class="button button-clear button-full" ng-click="confirm()"><b>{{total | currency: "IDR " : 0}} | ORDER</b></button>
+		</h1>
+		
+	</ion-footer-bar> -->
+</ion-view>

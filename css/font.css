@@ -1,0 +1,19 @@
+@font-face {
+  font-family:'Montserrat Medium';
+  src: url('../css/Montserrat-Medium.otf');
+}
+
+@font-face {
+  font-family:'Montserrat Regular';
+  src: url('../css/Montserrat-Regular.otf');
+}
+
+@font-face {
+  font-family:'Catamaran Regular';
+  src: url('../css/Catamaran-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Berkshire Swash';
+  src: url('../fonts/berkshireswashregular.eot');
+  src: url('../fonts/berkshireswashregular.eot') format('embedded-opentype'), url('../fonts/berkshireswashregular.woff2') format('woff2'), url('../fonts/berkshireswashregular.woff') format('woff'), url('../fonts/berkshireswashregular.ttf') format('truetype'), url('../fonts/berkshireswashregular.svg#berkshireswashregular') format('svg'); }
